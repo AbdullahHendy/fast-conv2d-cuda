@@ -63,7 +63,7 @@ The [final report](./report/final-report.pdf) discuss in detail the thought proc
 - **Build**: CMake >= 3.20, C++20 compiler (GCC >= 11 or Clang >= 13). ***Note**: C++17 supported for legacy PyTorch via CMake flag*.
 - **Python**: Python >= 3.9 with Cuda pytorch and Numpy.
 
-> Is that guaranteed to work? of course not!! welcome to Nvidia and python 🙄
+> Is that guaranteed to work? of course not!! welcome to Nvidia and Python 🙄
 
 ---
 
@@ -86,10 +86,10 @@ python -c "import torch; print('CUDA available:', torch.cuda.is_available(), '| 
 mkdir -p build && cd build
 cmake .. -DCMAKE_PREFIX_PATH="$(python3 -c 'import torch; print(torch.utils.cmake_prefix_path)')" # Defaults to C++20
 # For older PyTorch versions, use C++17
-cmake .. \
-  -DCMAKE_PREFIX_PATH="$(python3 -c 'import torch; print(torch.utils.cmake_prefix_path)')" \
-  -DCMAKE_CXX_STANDARD=17 \
-  -DCMAKE_CUDA_STANDARD=17
+#cmake .. \
+#  -DCMAKE_PREFIX_PATH="$(python3 -c 'import torch; print(torch.utils.cmake_prefix_path)')" \
+#  -DCMAKE_CXX_STANDARD=17 \
+#  -DCMAKE_CUDA_STANDARD=17
 
 cmake --build . -j$(($(nproc) - 2)) # Or whatever -j you like
 cd ..
