@@ -27,7 +27,6 @@
 - Tested on **Fashion-MNIST datashet** in `data/fashion-mnist/`
 
 - Tested with a **pre-trained checkpoint** in `checkpoints/`
- 
 
 ## Benchmark Results
 ### Target:
@@ -64,8 +63,6 @@ The [final report](./report/final-report.pdf) discuss in detail the thought proc
 - **Python**: Python >= 3.9 with Cuda pytorch and Numpy.
 
 > Is that guaranteed to work? of course not!! welcome to Nvidia and Python 🙄
-
----
 
 ## Installation
 ```bash
